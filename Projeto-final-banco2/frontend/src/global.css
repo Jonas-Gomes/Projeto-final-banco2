@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #EAEDED;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.3s;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main label {
+  color: #581845;
+}
+
+.login-form {
+  width: 480px;
+  height: 450px;
+  border: solid 2px #581845;
+  border-radius: 2px;
+}
+
+.main form {
+  width: 80%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main form input {
+  width: 300px;
+  height: 40px;
+  border: solid 2px #581845;
+  padding: 0 12px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  outline: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #581845;
+}
+
+.main form input:focus {
+  border: solid 2px #581845;
+}
+
+.main form button {
+  height: 50px;
+  outline: none;
+  background-color: #581845;
+  color: #FFF;
+  border: solid 2px #581845;
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.main form button:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.catalog-titulo{
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  color: #fff;
+}
+
+.login-titulo1{
+  position: absolute;
+  top: 10%;
+  left: 42.5%;
+  color: #581845;
+}
+
+.login-titulo2{
+  position: absolute;
+  top: 28%;
+  left: 49%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.mat-lbl{
+  position: absolute;
+  top: 35%;
+  left: 46.5%;
+  width: 500px;
+}
+
+.mat-field{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 500px;
+}
+
+.password-lbl{
+  position: absolute;
+  top: 50%;
+  left: 46.6%;
+}
+.password-field{
+  position: absolute;
+  top: 55%;
+  left: 40%;
+}
+
+.login-btn{
+  position: absolute;
+  top: 65%;
+  left: 44.5%;
+  width: 10%;
+}
+
+.cad-link{
+  position: absolute;
+  top: 75%;
+  left: 52%;
+  color: #581845;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cad-text{
+  position: absolute;
+  top: 75%;
+  left: 43.5%;
+}
+
+.cad-titulo{
+  position: absolute;
+  top: 10%;
+  left: 43%;
+  color: #581845;
+}
+
+.user-lbl-cad{
+  position: absolute;
+  top: 20%;
+  left: 35%;
+}
+
+.user-field-cad{
+  position: absolute;
+  top: 25%;
+  left: 28.5%;
+}
+
+.mat-lbl-cad{
+  position: absolute;
+  top: 20%;
+  left: 58.5%;
+}
+
+.mat-field-cad{
+  position: absolute;
+  top: 25%;
+  left: 53%;
+}
+
+.email-lbl{
+  position: absolute;
+  top: 35%;
+  left: 35%;
+}
+
+.email-field{
+  position: absolute;
+  top: 40%;
+  left: 28.5%;
+}
+
+.bairro-lbl{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.bairro-field{
+  position: absolute;
+  top: 55%;
+  left: 28.5%;
+}
+
+.estado-lbl{
+  position: absolute;
+  top: 50%;
+  left: 58.5%;
+}
+
+.estado-field{
+  position: absolute;
+  top: 55%;
+  left: 53%;
+}
+
+.rua-lbl{
+  position: absolute;
+  top: 65%;
+  left: 34%;
+}
+
+.rua-field{
+  position: absolute;
+  top: 70%;
+  left: 28.5%;
+}
+
+.senha-lbl{
+  position: absolute;
+  top: 65%;
+  left: 58.5%;
+}
+
+.senha-field{
+  position: absolute;
+  top: 70%;
+  left: 53%;
+}
+
+.cidade-lbl{
+  position: absolute;
+  top: 35%;
+  left: 58.8%;
+}
+
+.cidade-field{
+  position: absolute;
+  top: 40%;
+  left: 53%;
+}
+
+.cad-btn{
+  position: absolute;
+  top: 80%;
+  left: 44.5%;
+  width: 10%;
+}
+
+ul{
+  z-index: 1;
+}
+
+ul li{
+  margin: 15px;
+  padding: 10px;
+  width: 350px;
+  height: 180px;
+  background-color: #FFF;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  list-style: none;
+}
+
+.verAluno-btn{
+  position: relative;
+  top: 40%;
+  left: 20%;
+  width: 150px;
+}
+
+ul button{
+  position: relative;
+  top: 15px;
+  left: 0px;
+  padding: 5px;
+  outline: none;
+  
+  border-radius: 4px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.edit-btn{
+  background-color: #581845;
+  color: #FFF;
+  border: none;
+}
+
+.delete-btn{
+  background-color: #C20000;
+  color: #FFF;
+  border: none;
+}
+
+.escanteio {
+  position: absolute;
+  top: -30%;
+  left: -38%;
+  background-color: #581845;
+  width: 1200px;
+  height: 1200px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.endereco-titulo{
+  position: relative;
+  top: -64%;
+  left: 40%;
+}
