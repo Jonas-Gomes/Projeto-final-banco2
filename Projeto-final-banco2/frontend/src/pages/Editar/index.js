@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import '../../global.css';
 import api from '../../services/api';
 
@@ -9,26 +10,22 @@ export default function Cadastro() {
   const userName = localStorage.getItem('userName');
   const userMatricula = localStorage.getItem('userMatricula');
   const userEmail = localStorage.getItem('userEmail');
-  const userCidade = localStorage.getItem('userCidade');
 
   const history = useHistory();
 
   const[name, setNewName] = useState(userName);
   const[matricula, setNewMatricula] = useState(userMatricula);
   const[email, setNewEmail] = useState(userEmail);
-  const[cidade, setNewCidade] = useState(userCidade);
-  const[estado, setEstado] = useState('');
-  const[rua, setRua] = useState('');
-  const[bairro, setBairro] = useState('');
 
+
+  
   async function editar(e){
     e.preventDefault();
 
     const data={
       name,
       matricula,
-      email,
-      cidade 
+      email
     };
 
     try{
@@ -45,8 +42,13 @@ export default function Cadastro() {
   }
   return (
     <div className="main">
-      <h1 className="cad-titulo">Editar dados do usuário</h1>
+      <h1 className="editar-titulo">Editar dados do usuário</h1>
       
+      <Link to="/catalog">
+        <button className="logout-btn" type="button">
+          Voltar
+        </button>
+      </Link>
       <div className="cad-form">
       <form onSubmit={editar}>
         <label className="user-lbl-cad">Informe seu nome</label>
@@ -57,20 +59,7 @@ export default function Cadastro() {
 
         <label className="email-lbl">Informe seu email</label>
         <input required id="email" type="email" className="email-field" value={email} onChange={e => setNewEmail(e.target.value)} placeholder="email@exemplo.com"/>
-
-        <label className="cidade-lbl">Informe sua cidade</label>
-        <input required id="cidade"  className="cidade-field" value={cidade} onChange={e => setNewCidade(e.target.value)} placeholder="Cidade"/>
-
-        <label className="estado-lbl">Informe seu estado</label>
-        <input required id="estado"  className="estado-field" value={estado} onChange={e => setEstado(e.target.value)} placeholder="Estado"/>
-
-        <label className="rua-lbl">Informe a rua e o numero</label>
-        <input required id="rua"  className="rua-field" value={rua} onChange={e => setRua(e.target.value)} placeholder="exemplo: Rua, numero"/>
-
-        <label className="bairro-lbl">Informe seu  bairro</label>
-        <input required id="bairro"  className="bairro-field" value={bairro} onChange={e => setBairro(e.target.value)} placeholder="Bairro"/>
-
-        <button className="cad-btn" type="submit">Editar</button>
+        <button className="editar-btn" type="submit">Editar</button>
       </form>
       
       </div>

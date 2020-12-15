@@ -98,7 +98,7 @@ body {
 
 .catalog-titulo{
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: 8%;
   color: #fff;
 }
@@ -169,6 +169,13 @@ body {
   position: absolute;
   top: 10%;
   left: 43%;
+  color: #581845;
+}
+
+.editar-titulo{
+  position: absolute;
+  top: 10%;
+  left: 41%;
   color: #581845;
 }
 
@@ -275,6 +282,13 @@ body {
   width: 10%;
 }
 
+.editar-btn{
+  position: absolute;
+  top: 50%;
+  left: 44.5%;
+  width: 10%;
+}
+
 ul{
   z-index: 1;
 }
@@ -290,11 +304,34 @@ ul li{
   list-style: none;
 }
 
-.verAluno-btn{
-  position: relative;
-  top: 40%;
-  left: 20%;
-  width: 150px;
+.info-btn{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  padding: 5px;
+  color: #581845;
+  background-color: #EAEDED;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.logout-btn{
+  position: absolute;
+  top: 6%;
+  left: 90%;
+  padding: 5px;
+  color: #fff;
+  background-color: #581845;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 ul button{

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import '../../global.css';
 import api from '../../services/api';
 import { useHistory } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 export default function Cadastro() {
   const[name, setName] = useState('');
@@ -58,6 +59,12 @@ export default function Cadastro() {
     <div className="main">
       <h1 className="cad-titulo">Faça seu cadastro</h1>
       
+      <Link to="/">
+        <button className="logout-btn" type="button">
+          Voltar
+        </button>
+      </Link>
+
       <div className="cad-form">
       <form onSubmit={cadastro}>
         <label className="user-lbl-cad">Informe seu nome</label>

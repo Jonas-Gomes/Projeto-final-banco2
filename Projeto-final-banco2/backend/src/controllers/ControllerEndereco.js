@@ -21,6 +21,12 @@ module.exports = {
         }));
     },
     
+    async delete(request, response){
+        Endereco.destroy({where: {matricula: request.params.id}});
+        
+        then(response.json({endereco}));
+    },
+    
     async update(request, response){
         const {cidade,estado,rua,bairro} = request.body;
 

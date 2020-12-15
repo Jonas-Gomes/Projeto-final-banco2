@@ -6,26 +6,25 @@ import {Link} from 'react-router-dom';
 import api from '../../services/api';
 import { useHistory } from 'react-router-dom';
 
-function Login() {
+export default function Login() {
   const[matricula, setMatricula] = useState('');
   const[senha, setSenha] = useState('');
 
-
   const history = useHistory();
 
-async function login(e){
-  e.preventeDefault();
-
+  async function makeLogin(e){
+    e.preventDefault();
+  
   const data={
     matricula,
     senha
   };
 
   try{
-    await api.get('users', matricula);
-    
+    await api.post(`/session/`, data);
     history.push('catalog');
   }
+  
   catch(err){
     alert('Erro ao logar');
     console.log(err);
@@ -37,14 +36,15 @@ async function login(e){
       
       
       <div className="login-form">
-      <form onSubmit={login}>
+      
+      <form onSubmit={makeLogin}>
         <label className="login-titulo2">Login</label>
 
         <label className="mat-lbl">Digite sua matrícula</label>
-        <input required id="mat" type="number" className="mat-field" min="200012010000" max="202012020099" placeholder="Matrícula"/>
+        <input required id="mat" type="number" className="mat-field" min="200012010000" max="202012020099" value={matricula} onChange={e => setMatricula(e.target.value)} placeholder="Matrícula"/>
         
         <label className="password-lbl">Digite sua senha</label>
-        <input required id="password"  type="password" className="password-field" placeholder="Senha"/>
+        <input required id="password"  type="password" className="password-field" value={senha} onChange={e => setSenha(e.target.value)} placeholder="Senha"/>
         
         <button className="login-btn" type="submit">Acessar</button>
       </form>
@@ -60,5 +60,3 @@ async function login(e){
     </div>
   ); 
 }
-
-export default Login;
